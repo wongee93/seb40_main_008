@@ -4,6 +4,19 @@ import GoogleProvider from 'next-auth/providers/google';
 import KakaoProvider from "next-auth/providers/kakao"
 import NaverProvider from "next-auth/providers/naver";
 
+const googleClientId = process.env.GOOGLE_CLIENT_ID;
+const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
+const kakaoClientId = process.env.KAKAO_CLIENT_ID;
+const kakaoClientSecret = process.env.KAKAO_CLIENT_SECRET;
+
+if (!googleClientId || !googleClientSecret) {
+	throw new Error('Google provider credentials not found');
+}
+
+if (!kakaoClientId || !kakaoClientSecret) {
+	throw new Error('Kakao provider credentials not found');
+}
+
 export default NextAuth({
 	providers: [
 		GoogleProvider({
