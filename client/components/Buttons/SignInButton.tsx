@@ -3,7 +3,6 @@ import { signIn, signOut } from 'next-auth/react';
 import React from 'react';
 import Image from 'next/image';
 import styles from './Button.module.css';
-import naverlogo from '../../public/img/naverlogo.png';
 import kakaologo from '../../public/img/kakaologo.png';
 import googlelogo from '../../public/img/googlelogo.webp';
 
