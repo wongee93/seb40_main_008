@@ -20,6 +20,10 @@ const settings = {
 			},
 		],
 	},
+	env: {
+		EXP: process.env.EXP,
+		// 원하는 환경변수 여러개 추가 가능.
+	},
 };
 
 /*
@@ -46,5 +50,11 @@ const settings = {
 // 	process.env.NODE_ENV === 'development' ? settings : withPwa(settings);
 
 module.exports = settings;
+// module.exports = {
+	// env: {
+	// 	EXP: process.env.EXP,
+	// 	// 원하는 환경변수 여러개 추가 가능.
+	// },
+// };
 
 //picsum.photos/seed/picsum/200/300
