@@ -16,7 +16,10 @@ export const SignOut = () => {
 			// const res = await fetch('/api/logout');
 			removeCookies('accessToken');
 
-			if (!!getCookie('accessToken')) {
+			const cookie = getCookie('accessToken');
+			console.log('cookie', cookie);
+
+			if (!getCookie('accessToken')) {
 				router.push(`/`);
 			}
 
