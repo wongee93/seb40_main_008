@@ -14,11 +14,11 @@ const LoginPage = async () => {
 	return (
 		<>
 			<BaseNavbar />
-			{/* <div className={styles.loginWrapper}> */}
-			{/* <Link href={'/'}>Home</Link> */}
-			{/* <p>User: {session?.user?.email || 'nothing'}</p> */}
-			{/* <SignInButton isSignIn={!!session} /> */}
-			{/* </div> */}
+			<div className={styles.loginWrapper}>
+				{/* <Link href={'/'}>Home</Link> */}
+				{/* <p>User: {session?.user?.email || 'nothing'}</p> */}
+				<SignInButton isSignIn={false} />
+			</div>
 		</>
 	);
 };
