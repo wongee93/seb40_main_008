@@ -13,7 +13,7 @@ const LoginPage = async () => {
 
 	return (
 		<>
-			<BaseNavbar />
+			{/* <BaseNavbar /> */}
 			<div className={styles.loginWrapper}>
 				{/* <Link href={'/'}>Home</Link> */}
 				{/* <p>User: {session?.user?.email || 'nothing'}</p> */}
