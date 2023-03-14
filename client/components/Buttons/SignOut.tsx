@@ -20,7 +20,8 @@ export const SignOut = () => {
 			console.log('cookie', cookie);
 
 			if (!getCookie('accessToken')) {
-				router.push(`/`);
+				// router.push(`/`);
+				document.location.href = `/`;
 			}
 
 		} catch (error) {
