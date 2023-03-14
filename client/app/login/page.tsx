@@ -9,7 +9,7 @@ import BaseNavbar from '../../components/BaseNavBar/BaseNavbar';
 // 토큰 string으로 넘겨드리기 -> json으로 받아서
 
 const LoginPage = async () => {
-	const session = await getSession(headers().get('cookie') ?? '');
+	// const session = await getSession(headers().get('cookie') ?? '');
 
 	return (
 		<>
