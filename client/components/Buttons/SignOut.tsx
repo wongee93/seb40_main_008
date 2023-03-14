@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import OrangeButton from './orangeButton';
-import { deleteCookie, getCookie } from 'cookies-next';
+import { deleteCookie, getCookie, removeCookies } from 'cookies-next';
 import { useRouter } from 'next/navigation';
 
 // accesstoken파기하고 redirect home
@@ -13,10 +13,13 @@ export const SignOut = () => {
 
 	const handleSignout = async () => {
 		try {
-			const res = await fetch('/api/logout');
-			if (res.ok) {
+			// const res = await fetch('/api/logout');
+			removeCookies('accessToken');
+
+			if (!!getCookie('accessToken')) {
 				router.push('/');
 			}
+
 		} catch (error) {
 			console.log('err', error);
 		}
