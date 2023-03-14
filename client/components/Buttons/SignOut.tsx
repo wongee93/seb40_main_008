@@ -17,7 +17,7 @@ export const SignOut = () => {
 			removeCookies('accessToken');
 
 			if (!!getCookie('accessToken')) {
-				router.push('/');
+				router.push(`/`);
 			}
 
 		} catch (error) {
